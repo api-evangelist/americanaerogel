@@ -1,23 +1,56 @@
 aid: americanaerogel
+
 name: Americanaerogel
-description: 'Americanaerogel is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'American Aerogel Corp is a company that develops and manufactures advanced aerogel materials for insulation and industrial applications. According to Bloomberg, the firm provides innovative lightweight solutions and operates globally, offering products that improve energy efficiency across sectors. The company is listed with a profile on Bloomberg and appears in various business directories, indicating an established corporate presence.'
+
 url: https://raw.githubusercontent.com/api-evangelist/americanaerogel/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/americanaerogel-hosts.yml
+- type: Vendors
+  url: vendors/americanaerogel-vendors.yml
+- type: DomainSecurity
+  url: security/americanaerogel-domain-security.yml
 - type: Website
   url: https://equityzen.com/company/americanaerogel
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The company website redirects to aerosafeglobal.com which provides no public API documentation or machine‑readable contract.
+  evidence:
+    - url: https://www.aerosafeglobal.com
+      status: 200
+  checked: 2026-09-24
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
